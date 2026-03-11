@@ -1,0 +1,84 @@
+SIE Global Digital Marketplace Policy (v4.2 - 2026)
+Document Status: CONFIDENTIAL / INTERNAL USE ONLY
+Effective Date: January 1, 2026
+Distribution: Global Operations, Legal Compliance, Engineering Operations, Customer Service, Regional Directors
+Document ID: SIE-LEG-COMP-2026-0992A
+
+1.0 Definitions and Interpretations
+1.1 "SIE" refers to Sony Interactive Entertainment LLC, its parent companies, subsidiaries, and affiliated corporate entities worldwide.
+1.2 "Digital Marketplace" or "Storefront" refers to the PlayStation™Store accessible via PlayStation®5, PlayStation®4, legacy hardware interfaces, web browsers, and mobile applications.
+1.3 "MSRP" means Manufacturer's Suggested Retail Price, inclusive of local taxes where mandated by regional law, and exclusive of taxes where permitted.
+1.4 "GPS" refers to the Global Pricing Service architecture responsible for syncing regional database values.
+1.5 "Obvious Pricing Error" refers to a systemic or human error resulting in a digital good being listed at a price mathematically incongruous with standard market rates, specifically defined as a deviation exceeding 90% of the intended regional MSRP.
+1.6 "Direct Redress" means the financial reimbursement of funds directly to the User's original Payment Method (e.g., Credit Card, PayPal), rather than the issuance of closed-loop virtual currency.
+1.7 "Legacy Hardware" refers to previously manufactured consumer electronics including, but not limited to, PlayStation®4, PlayStation®3, and PlayStation®Vita systems still accessing backend network services.
+
+2.0 Scope and Applicability
+2.1 This policy governs all digital transactions executed within the Storefront, encompassing full digital software licenses, downloadable content (DLC), microtransactions, virtual currencies, and recurring subscription services (e.g., PlayStation®Plus) across all SIE-supported territories globally.
+2.2 In the event of a conflict between this internal policy and outward-facing Regional Terms of Service, the Legal Compliance team must be engaged to mediate the discrepancy prior to any engineering action, unless an Emergency Stop (E-Stop) protocol is triggered under Section 15.
+
+3.0 Regional Pricing & Currency Synchronization
+3.1 Metadata Integrity: Regional pricing must be strictly synchronized via the Global Pricing Service (GPS). Metadata for the Asia-Pacific (APAC) region, specifically Japan (JP), must adhere to JPY rounding standards (i.e., no decimal fractional currencies permitted in consumer-facing displays).
+3.2 Polling Intervals: The GPS shall poll regional databases at an interval not exceeding 300 seconds (5 minutes) to ensure parity between publisher intent and consumer display.
+3.3 Currency Glitch Protocols: In the event of a metadata synchronization error (e.g., decimal displacement, incorrect API fallback, or currency symbol mismatch), the affected regional Storefront must be placed into "Maintenance Mode" (Error Code: WS-116521-3) within 15 minutes of anomaly detection by the Network Operations Center (NOC).
+
+4.0 Account Security and Fraud Prevention
+4.1 All transactions must pass through the SIE proprietary Risk & Fraud Analysis Engine (RFAE).
+4.2 Transactions originating from IP addresses matching known VPN/Proxy subnets associated with regional price circumvention will be automatically flagged for review and subject to a 72-hour hold.
+4.3 Chargeback thresholds exceeding 0.5% per publisher per financial quarter will trigger an automatic audit of the publisher's in-game economy mechanics.
+
+5.0 Taxation and Value Added Tax (VAT) Remittance
+5.1 SIE acts as the merchant of record for all transactions. VAT, GST, and regional sales taxes must be calculated at the point of checkout based on the User's registered Account Location and IP geolocation consensus.
+5.2 Discrepancies between Account Location and IP geolocation in high-tax jurisdictions (e.g., European Union) require secondary authentication prior to purchase completion.
+
+6.0 Content Licensing and Digital Rights Management (DRM)
+6.1 Users do not purchase digital goods; Users purchase a revocable, non-exclusive license to consume digital goods.
+6.2 SIE reserves the right to revoke, suspend, or terminate these licenses without prior notice in the event of Terms of Service violations, including but not limited to the exploitation of marketplace vulnerabilities or unauthorized hardware modifications.
+
+7.0 Subscription Services
+7.1 Auto-renewal obligations must comply with the California Automatic Renewal Law (ARL) globally to ensure a unified codebase, regardless of the User's actual jurisdiction.
+7.2 Price increases to recurring subscriptions require a minimum of 60 days advance notice to the User via registered email and console-level push notifications.
+
+8.0 Virtual Currencies (Wallet Funds)
+8.1 PlayStation™Network Wallet funds are non-transferable between accounts and non-refundable, except where strictly required by local law (see Section 12).
+8.2 The maximum allowable wallet balance varies by region and is hard-coded into the GPS to prevent money laundering exploitation.
+
+9.0 Pre-Orders and Early Access
+9.1 Pre-orders may be canceled by the User at any time prior to the official release date for a full refund to the original payment method.
+9.2 "Early Access" periods granted via premium edition purchases are classified as active consumption; refunds requested during an Early Access window are subject to standard post-launch evaluation criteria.
+
+10.0 Third-Party Publisher Obligations
+10.1 Publishers updating pricing metadata must submit changes to the SIE Partner Portal no less than 72 hours prior to the intended effective date.
+10.2 SIE is not financially liable for lost revenue stemming from Publisher-initiated metadata errors, provided SIE systems polled and displayed the submitted data accurately.
+
+11.0 Service Level Agreements (SLAs) and Uptime
+11.1 The Storefront aims for 99.99% uptime.
+11.2 Scheduled maintenance must occur during regional off-peak hours (typically 02:00 to 05:00 local time). Emergency maintenance overrides require VP-level authorization.
+
+12.0 Refund & Cancellation Protocols (APAC Region)
+12.1 General Digital Content: Users may request a refund within 14 days of purchase provided the content has not been downloaded or streamed. Initiation of a download explicitly waives the standard cooling-off period.
+12.2 Faulty Content: If a digital good is deemed "fundamentally broken" (e.g., game-breaking bugs preventing progression), a refund may be issued regardless of download status, pending a directive from the Publisher Relations division.
+12.3 Subscription Cancellations: Refer to Section 7.1.
+12.4 Special Clause: Obvious Pricing Errors (Japan):
+In the event of an "Obvious Pricing Error" (defined as a discrepancy of >90% of the intended MSRP) within the Japan Storefront, the following actions are strictly mandated by SIE Compliance and the Japanese Act on Specified Commercial Transactions:
+Direct Redress: SIE is strictly required to offer a Direct Refund to the original payment method (Credit Card, PayPal, Carrier Billing, etc.) for all affected transactions.
+Wallet Credit Limitation: Issuing "PSN Wallet Credit" in lieu of a direct refund is strictly prohibited for systemic pricing errors unless the user is contacted directly and provides explicit, digitally recorded consent.
+License Revocation: SIE reserves the right to revoke licenses for content purchased during a "Pricing Incident" provided that the full Direct Refund is initiated within 48 hours of the incident's resolution. Failure to meet the 48-hour window results in the User retaining the license in perpetuity.
+
+13.0 Data Privacy and APPI Compliance
+13.1 In accordance with the Act on the Protection of Personal Information (APPI) in Japan, transaction logs related to pricing disputes must be retained for a minimum of 7 years, but payment method details must be tokenized.
+
+14.0 Force Majeure
+14.1 SIE shall not be held liable for Storefront outages, pricing anomalies, or failure to deliver digital goods caused by events outside of reasonable control, including but not limited to acts of God, terrestrial network trunk failures, or state-sponsored cyber-attacks.
+
+15.0 Technical Safeguards & Integration (Engineering Directives)
+15.1 Legacy System Compatibility: All pricing hotfixes, database migrations, and metadata overrides must be validated against legacy system kernels (PS4/PS3/PS Vita) within the Staging Environment prior to being merged into the Production branch.
+15.2 Force Merge Restrictions: Engineers are strictly prohibited from utilizing a "Force Merge" (bypassing CI/CD pipeline checks) on pricing metadata scripts if the "Integration Stability Test" (IST) for legacy hardware returns a failure or timeout code. Bypassing legacy IST checks can result in cascading Out-Of-Memory (OOM) errors on consumer hardware, leading to console soft-locks.
+15.3 Database Write-Locks: During designated "Launch Windows" for Tier-1 titles, the GPS database is placed under a strict write-lock. Overriding this lock requires dual-authorization from the Lead Duty Engineer and the Regional Operations Director.
+
+16.0 Limitation of Liability
+16.1 To the maximum extent permitted by applicable law, SIE’s aggregate liability arising out of or related to Storefront transactions, whether in contract, tort, or otherwise, shall not exceed the total amount paid by the specific User for the disputed digital good.
+
+17.0 Internal Reporting and Whistleblower Protections
+17.1 Employees who identify deliberate circumvention of Section 15 Engineering Directives or Section 12 Refund Protocols are required to report the violation to the Office of the General Counsel.
+
