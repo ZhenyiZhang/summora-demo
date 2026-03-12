@@ -40,7 +40,6 @@ Branch naming:
 > Hotfix: correct JP legacy PS4 pricing rounding (PR #912)
 
 ### Intended PR description
-
 > The Japan Store is currently charging **¥800 instead of ¥8,000** for the `ASTRO-JP-SE` SKU on **legacy PS4 Storefronts**.\n>
 > Root cause: the legacy PS4 adapter still divides Yen amounts by 10, a leftover from an earlier firmware contract.\n>
 > This PR:\n>

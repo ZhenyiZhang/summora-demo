@@ -1,16 +1,9 @@
-import type { Money, PriceInput, Region } from "./types";
-
-function currencyForRegion(region: Region): Money["currency"] {
-  switch (region) {
-    case "JP":
-      return "JPY";
-    case "US":
-      return "USD";
-    case "EU":
-    default:
-      return "EUR";
-  }
-}
+import type { Money, PriceInput } from "./types";
+import {
+  calculateJpyDisplayMoney,
+  calculateNonJpDisplayMoney,
+  currencyForRegion,
+} from "./priceFormatting";
 
 /**
  * Core pricing logic used by all Storefronts.
@@ -23,13 +16,14 @@ export function calculateDisplayPrice(input: PriceInput): Money {
   const currency = currencyForRegion(input.region);
 
   if (currency === "JPY") {
-    const amount = Math.round(input.basePriceCents / 100);
-    return { amount, currency };
+    return calculateJpyDisplayMoney(input);
   }
 
   // For non-JP regions this demo keeps it simple and just returns a
   // 2-decimal style amount, but represented as integer "cents" for tests.
-  const amount = Math.round(input.basePriceCents) / 100;
-  return { amount, currency } as Money;
+  return calculateNonJpDisplayMoney(
+    input,
+    currency as Exclude<Money["currency"], "JPY">
+  );
 }
 
