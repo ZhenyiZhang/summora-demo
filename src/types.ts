@@ -16,6 +16,19 @@ export interface Money {
   currency: "JPY" | "USD" | "EUR";
 }
 
+export interface PriceFormattingOptions {
+  /**
+   * Optional BFF-side hinting for how a given storefront prefers to
+   * present prices (e.g. locale or currency symbol handling).
+   *
+   * This is intentionally not used by the core pricing logic yet, but
+   * exists as a realistic "future extension" type to make the PR
+   * diff look larger for demo purposes.
+   */
+  locale?: string;
+  showCurrencySymbol?: boolean;
+}
+
 export interface LegacyPricePayload {
   skuId: string;
   platform: Platform;
